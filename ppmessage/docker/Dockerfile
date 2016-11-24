@@ -48,7 +48,7 @@ python-dev \
 redis-server \
 wget
 
-RUN wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py && \
+RUN wget https://bootstrap.pypa.io/get-pip.py && \
 python get-pip.py
 
 
