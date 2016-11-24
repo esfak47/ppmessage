@@ -45,9 +45,12 @@ openssl \
 pkg-config \
 python \
 python-dev \
-python-pip \
 redis-server \
 wget
+
+RUN wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py && \
+python get-pip.py
+
 
 RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple \
 axmlparserpy \
@@ -83,7 +86,8 @@ numpy \
 matplotlib \
 scipy \
 scikit-learn \
-pymysql
+pymysql \
+stringgenerator
 
 WORKDIR /tmp
 
@@ -122,8 +126,7 @@ RUN wget http://cdn.mysql.com//Downloads/Connector-Python/mysql-connector-python
 && make && make install \
 && rm -fr /tmp/*
 
-RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple \
-stringgenerator
+
 
 # others
 EXPOSE 8080 80
