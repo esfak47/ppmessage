@@ -6,7 +6,7 @@ PIP="`which pip`"
 VERBOSE=""
 
 function ppmessage_options()
-{ 
+{
     if [ "$2" = "-v" ];
     then
         VERBOSE="1"
@@ -251,6 +251,7 @@ function ppmessage_cnpm()
     cd ppmessage/ppcom/gulp; cnpm install; cd -;
     cd ppmessage/ppkefu/gulp; cnpm install; cd -;
     cd ppmessage/ppconsole/gulp; cnpm install; cd -;
+    cd ppmessage/ppconfig/gulp; cnpm install; cd -;
 }
 
 function ppmessage_build()
@@ -300,7 +301,7 @@ case "$1" in
     apply-config)
         ppmessage_apply_config
         ;;
-    
+
     dev)
         ppmessage_need_root
         ppmessage_dev
@@ -344,7 +345,7 @@ case "$1" in
     log)
         ppmessage_log
         ;;
-    
+
     gulp)
         ppmessage_gulp
         ;;
@@ -392,7 +393,7 @@ case "$1" in
     app-scp)
         ppmessage_app_scp
         ;;
-    
+
     *)
         ppmessage_help
         exit 0

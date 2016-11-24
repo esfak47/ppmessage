@@ -19,7 +19,7 @@ class bcolors:
     WARNING = '\033[93m'
     FAIL = '\033[91m'
     ENDC = '\033[0m'
-    
+
 def set_mysql_password():
     password = BOOTSTRAP_CONFIG["mysql"]["db_pass"]
     print "set mysql password to: %s" %password
@@ -34,10 +34,10 @@ def check_nginx_conf_path():
     if path == right_path:
         print "done! \n"
         return
-    
+
     print bcolors.FAIL + "nginx_conf_path is not right, please set it to: %s \n" %right_path + bcolors.ENDC
     return
 
 if __name__ == "__main__":
     set_mysql_password()
-    check_nginx_conf_path()
+    # check_nginx_conf_path()

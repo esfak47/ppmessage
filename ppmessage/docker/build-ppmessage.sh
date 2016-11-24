@@ -1,3 +1,2 @@
 #!/bin/bash
-
-docker build --rm -t ppmessage/ppmessage:latest .
+docker -D  build --rm -t ppmessage/ppmessage:latest .
