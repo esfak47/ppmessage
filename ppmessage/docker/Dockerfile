@@ -47,7 +47,7 @@ python \
 python-dev \
 python-pip \
 redis-server \
-wget \
+wget
 
 RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple \
 axmlparserpy \
