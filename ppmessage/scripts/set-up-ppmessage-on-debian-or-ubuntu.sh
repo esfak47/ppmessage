@@ -85,7 +85,7 @@ apt-get install -y \
 
 
 # "pip install -i http://pypi.douban.com/simple xxx" might be faster
-pip install \
+pip install --trusted-host pypi.douban.com -i http://pypi.douban.com/simple \
     apns2 \
     pillow \
     StringGenerator \
