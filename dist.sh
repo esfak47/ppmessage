@@ -48,6 +48,7 @@ Commands:
   bower                       Install bower components.
   npm                         Install node components.
   cnpm                        Install node components, using cnpm.
+  bootstrap                   Bootstrap the ppmessage
   gulp                        Run all gulp tasks.
 
 Options:
@@ -273,6 +274,12 @@ function ppmessage_apply_config()
 
 }
 
+
+function ppmessage_bootstrap() {
+  #reload the nginx
+}
+
+
 ### MAIN ###
 
 echo
@@ -322,6 +329,10 @@ case "$1" in
 
     run)
         ppmessage_run
+        ;;
+
+    bootstrap)
+        ppmessage_bootstrap
         ;;
 
     proc)

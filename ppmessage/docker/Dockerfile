@@ -129,13 +129,10 @@ RUN wget http://cdn.mysql.com//Downloads/Connector-Python/mysql-connector-python
 && make && make install \
 && rm -fr /tmp/*
 
-
-
-# others
 EXPOSE 8080 80
-EXPOSE 8945 8945
+
 VOLUME ["/ppmessage"]
+ADD ../../ message
+COPY ["startup.sh", "/.startup.sh"]
 
-COPY ["docker-entrypoint.sh", "/.entrypoint.sh"]
-
-ENTRYPOINT ["/.entrypoint.sh"]
+ENTRYPOINT ["/.startup.sh"]
