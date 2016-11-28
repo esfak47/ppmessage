@@ -275,7 +275,8 @@ function ppmessage_apply_config()
 }
 
 
-function ppmessage_bootstrap() {
+function ppmessage_bootstrap()
+{
   #reload the nginx
 }
 
