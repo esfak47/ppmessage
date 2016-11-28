@@ -381,7 +381,7 @@ PPAUTH_PORT = 8943
 PPCONSOLE_PORT = 8944
 
 # all in one backend service port
-MAIN_PORT = 8945
+MAIN_PORT = 80
 
 PPCONFIG_PORT = 8946
 
