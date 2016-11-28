@@ -22,14 +22,15 @@
                 "name": "English"
             }
         ],
-        "identicon_store": "/var/store",
+
         "disable_submit": true,
         "language": {
             "locale": "zh_CN",
             "name": "Simplified Chinese"
         },
         "url": "http://172.16.2.21",
-        "generic_store": "/var/store",
+        "identicon_store": "/usr/local/opt/ppmessage/identicon",
+        "generic_store": "/usr/local/opt/ppmessage/generic",
         "ssl": "off",
         "port": 80,
         "name": "172.16.2.21"
