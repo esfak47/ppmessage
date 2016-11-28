@@ -1,5 +1,5 @@
 NGINX_VERSION=1.8.0
-
+apt-get install -y libpcre3 libpcre3-dev 
 cd /tmp \
 && wget http://nginx.org/download/nginx-$NGINX_VERSION.tar.gz \
 && git clone https://github.com/vkholodkov/nginx-upload-module.git \
