@@ -23,17 +23,17 @@ def _replace(_d):
     _ssl = _d.get("ssl")
     _host = _d.get("server_name")
     _port = str(_d.get("server_port"))
-    
+
     TEMPLATE_MIN_JS = "../../resource/assets/ppcom/assets/pp-library-template.min.js"
     MIN_JS = "../../resource/assets/ppcom/assets/pp-library.min.js"
-    
+
     _template_min_js = os.path.join(_cur_dir(), TEMPLATE_MIN_JS)
     _min_js = os.path.join(_cur_dir(), MIN_JS)
 
     if not os.path.exists(_template_min_js):
         logging.error("no such file: %s" % _template_min_js)
         return
-    
+
     ws = "ws://"
     http = "http://"
     host = _host + ":" + _port
@@ -57,7 +57,7 @@ def _replace(_d):
     with open(_template_min_js, "r") as _t:
         _str = _t.read()
         _str = _str\
-               .replace('{portal}', 'https://ppmessage.com')\
+               .replace('{portal}', 'https://www.ketianyun.com')\
                .replace('{auth}', auth)\
                .replace('{api}', api)\
                .replace('{web_socket_url}', web_socket_url)\
@@ -69,8 +69,8 @@ def _replace(_d):
                .replace('{ppcom_api_secret}', _api_secret)
         with open(_min_js, "w") as _o:
             _o.write(_str)
-    
-    return 
+
+    return
 
 def config(_dict):
     _replace(_dict)
@@ -91,7 +91,7 @@ def _main():
     if _get_config() == None or _get_config().get("config_status") != CONFIG_STATUS.RESTART:
         print("PPMessage not configed.")
         return
-    
+
     _api = _get_config().get("api")
     _d = {
         "key": _api.get(API_LEVEL.PPCOM.lower()).get("key"),
@@ -101,7 +101,8 @@ def _main():
         "server_port": _get_config().get("server").get("port")
     }
     config(_d)
-
+    print "config is "
+    print _d
     return
 
 if __name__ == "__main__":

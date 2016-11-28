@@ -194,7 +194,7 @@ TASK_STATUS = Enum([
     "PROCESSED",
     "CANCELLED",
     "ACKED"
-]) 
+])
 
 MESSAGE_STATUS = Enum([
     "PENDING",
@@ -295,7 +295,7 @@ APNS_TITLE = {
         "ACCEPT": "好友邀请通过消息",
         "DG_INVITED": "加入群聊消息"
     },
-    
+
     "EN_US" : {
         "UNKNOWN": "unknown message type",
         "TXT": "text message",
@@ -361,7 +361,7 @@ PCSOCKET_PORT = 8931
 
 IOSPUSH_HOST = "127.0.0.1"
 IOSPUSH_PORT = 8932
-    
+
 PPCOM_PORT = 8934
 
 PPAUTOINSTALL_PORT = 8936
