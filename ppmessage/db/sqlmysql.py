@@ -39,7 +39,7 @@ def ping_connection(dbapi_connection, connection_record, connection_proxy):
     return
 
 class SqlInstance(SqlNone):
-    
+
     def __init__(self, _db_config):
         self.mysql_config = _db_config
         self.db_name = self.mysql_config.get("db_name")
@@ -52,10 +52,10 @@ class SqlInstance(SqlNone):
 
     def name(self):
         return SQL.MYSQL
-    
+
     def createEngine(self):
-        db_string = "mysql+pymysql://%s:%s@%s:%s/%s" % \
-                    (self.db_user, 
+        db_string = "mysql+pymysql://%s:%s@%s:%s/%s?charset=utf8" % \
+                    (self.db_user,
                      self.db_pass,
                      self.db_host,
                      self.db_port,
@@ -65,4 +65,3 @@ class SqlInstance(SqlNone):
             self.dbengine = engine
 # it will create a thread local session for every single web request
         return self.dbengine
-

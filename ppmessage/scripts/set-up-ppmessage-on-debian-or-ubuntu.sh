@@ -47,6 +47,7 @@ apt-get install -y libjpeg62-turbo-dev
 
 # for ubuntu
 apt-get install -y libjpeg8-dev
+apt-get install -y libncurses5-dev
 
 apt-get install -y \
     sudo \
@@ -81,11 +82,13 @@ apt-get install -y \
     python-dev \
     python-pip \
     redis-server \
-    wget
+    wget \
+    build-essential \
+
 
 
 # "pip install -i http://pypi.douban.com/simple xxx" might be faster
-pip install \
+pip install --trusted-host pypi.douban.com -i http://pypi.douban.com/simple \
     apns2 \
     pillow \
     StringGenerator \
