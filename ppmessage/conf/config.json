@@ -1,0 +1,79 @@
+{
+    "config_status": "RESTART",
+    "db": {
+        "type": "mysql",
+        "mysql": {
+            "db_pass": "pass",
+            "db_name": "ppmessage",
+            "db_host": "172.16.2.21",
+            "db_user": "admin",
+            "db_port": "3306"
+        }
+    },
+    "configed": true,
+    "server": {
+        "languages": [
+            {
+                "locale": "zh_CN",
+                "name": "Simplified Chinese"
+            },
+            {
+                "locale": "en_US",
+                "name": "English"
+            }
+        ],
+        "identicon_store": "/opt/message/identicon",
+        "disable_submit": true,
+        "language": {
+            "locale": "zh_CN",
+            "name": "Simplified Chinese"
+        },
+        "url": "http://172.16.2.21",
+        "generic_store": "/opt/message/generic",
+        "ssl": "off",
+        "port": 80,
+        "name": "172.16.2.21"
+    },
+    "api": {
+        "ppconsole": {
+            "secret": "YTI3MzlmYWEzNDU4ZTA3YjU5Y2E4ZDY1MGU1Yzk3Y2FjYTMxMzRiZA==",
+            "uuid": "2164c2a4-b525-11e6-ba2d-d00d4c150877",
+            "key": "NzNmMGNjMWZjOTZkZmFmMWM1MDllOTRmN2JkMjY4NTc2MGFkMDNmMg=="
+        },
+        "ppkefu": {
+            "secret": "ZDIzYTg2NjVlYzNhZWMzNjA2NWNhYTU4NzhmNjY2NDcxNTAxYzVjMA==",
+            "uuid": "2161df76-b525-11e6-ba2d-d00d4c150877",
+            "key": "MDFmYmYxYWRkNGY0NWM5NDUzYzA2YjAxZWU4NzI5OTlkM2I2ZTg4MA=="
+        },
+        "third_party_kefu": {
+            "secret": "MmEzZDE0NDFmYmFhMzk0ZmIxNjEyOGRlYzUwYWZhOWVhMjNhOTFmYw==",
+            "uuid": "216a89fa-b525-11e6-ba2d-d00d4c150877",
+            "key": "ZGUzNTFiZTE1Nzc5ZjgwZjE0NmUzZjdiYTE0ZWQyZjdkMzM4NDVmYw=="
+        },
+        "ppconsole_before_login": {
+            "secret": "MmIwOWIwNDZjNjlkNjg0Yzg4NzFkNGYzZjZiZjE1YjZhNmI1ZDMzOA==",
+            "uuid": "21677f44-b525-11e6-ba2d-d00d4c150877",
+            "key": "NjZlNmM2NWIxY2Q5ZWVmZmZhYWRjMGQ2OTU1NWVmYThlNDU0ODUyNQ=="
+        },
+        "ppcom": {
+            "secret": "YWYyOGY3MTEwZGNhNmQ4YTJkM2Q3OTJlYzk2Y2NlYTAwOGJmZmJlMQ==",
+            "uuid": "215eabee-b525-11e6-ba2d-d00d4c150877",
+            "key": "MWY0OTA3NTcwZjAxODU0M2RlYmNiMmEyNGVlOGYxZGZlZjhmZjdkYQ=="
+        },
+        "third_party_console": {
+            "secret": "NWM1YjhmZmUzOGNhODlhYjVhNWIxNGQ1NzIwOTk3NzUyMzdiZWMzMA==",
+            "uuid": "216d5c70-b525-11e6-ba2d-d00d4c150877",
+            "key": "YjYzM2NkMzhhNWQ1ZDZlNWExMTkxNTI4ZDczMzYxMDAwZDkzOGQyOA=="
+        }
+    },
+    "user": {
+        "user_password": "2e52d42aac9e5b2c18b29ae6e03bb5881c2ed80d",
+        "user_fullname": "王光宇",
+        "user_uuid": "214c23ca-b525-11e6-ba2d-d00d4c150877",
+        "user_email": "guangyu.wang@ketianyun.com"
+    },
+    "team": {
+        "app_uuid": "2154a5a4-b525-11e6-ba2d-d00d4c150877",
+        "name": "科天云客服"
+    }
+}
